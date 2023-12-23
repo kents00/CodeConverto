@@ -17,7 +17,7 @@ flask --app app run
 ```
 If you run into problems while running it locally, especially when installing openai, openai requires you to upgrade by running `pip install --upgrade openai`, then initialize grit with `grit init`, install the latest update with `grint install --update`, then migrate with `openai migrate`.
 
-#### Automatic migration with grit on Window
+#### Automatic migration with grit on Windows
 
 To use grit to migrate your code on Windows, you will need to use Windows Subsystem for Linux (WSL). Installing WSL is quick and easy, and you do not need to keep using Linux once the command is done.
 
