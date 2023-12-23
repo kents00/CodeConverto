@@ -8,7 +8,6 @@ from flask import Flask, request, render_template
 load_dotenv()
 
 client = OpenAI(
-    # this is also the default, it can be omitted
     api_key=os.environ['OPENAI_API_KEY']
 )
 
@@ -22,6 +21,11 @@ def home():
     return render_template('index.html')
 
 
+@app.errorhandler(404)
+def pagenotfound(error):
+    return render_template('404.html')
+
+
 @app.route("/convert", methods=['POST'])
 def translate():
     if request.method == "POST":
@@ -33,7 +37,7 @@ def translate():
         userinput_code = request.form.get("userinput_code")
         methods = request.form.get("methods")
 
-        prompt = f"\"Translate the user variables into {translate_languagae}; {methods} my {current_code} snippet into a {target_code} code full code ### {current_code} \n\n {userinput_code} ### {target_code}"
+        prompt = f"\"Translate the user variables into {translate_languagae}; {methods} my {current_code} snippet into a {target_code} code full code ### {current_code} \n\n {userinput_code} \n\n  ### {target_code}"
 
         completion = client.chat.completions.create(
             model='gpt-3.5-turbo-1106',

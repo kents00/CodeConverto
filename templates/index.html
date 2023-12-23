@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hearty Tight Yak</title>
-    <meta property="og:title" content="Hearty Tight Yak" />
+    <title>Code Converto</title>
+    <meta property="og:title" content="Code Converto" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -30,17 +30,12 @@
     </style>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
       data-tag="font"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
     <link
@@ -50,25 +45,36 @@
     />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
     />
-    <link href="../static/css/index.css" rel="stylesheet" />
-
-    <link href="../static/css/style.css" rel="stylesheet"/>
   </head>
   <body>
+    <link
+      href="../static/css/index.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../static/css/style.css"
+      rel="stylesheet"
+    />
     <div>
       <div class="home-container">
-        {% include "header.html" %}
-        {% block header %}
-        {% endblock %}
+          {% include "header.html" %}
+          {% block header %}
+          {% endblock %}
 
         <div class="home-container3">
           <form action="/convert" method="post">
           <div class="home-convert-to">
+
             <span class="home-text">Convert&nbsp;</span>
 
-            <select class="home-programming-language" name="target_code">
+            <select class="home-programming-language"  name="target_code">
               <option selected>Python</option>
               <option value="Javascript">Javascript</option>
               <option value="Typescript">Typescript</option>
@@ -86,26 +92,32 @@
             </select>
 
             <svg viewBox="0 0 1024 1024" class="home-icon13">
-              <path d="M512 85.333c-212.096 0-384 171.904-384 384s171.904 384 384 384 384-171.904 384-384-171.904-384-384-384zM597.333 170.667c0 42.667-21.333 85.333-64 85.333s-64 42.667-64 85.333 0 128 0 128 42.667 0 42.667-128c0-23.595 19.072-42.667 42.667-42.667s42.667 19.072 42.667 42.667v128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667c23.595 0 42.667-19.115 42.667-42.667h42.667v-85.333l42.667 42.667-42.667 42.667c0 128 0 128-85.333 170.667 0-42.667-42.667-42.667-128-42.667v-85.333l-85.333-85.333v-85.333c-42.667 0-42.667 42.667-42.667 42.667l-23.936-23.936-101.973-101.973c4.693-8.192 9.6-16.299 14.933-24.064l22.315-28.928c62.635-73.216 155.477-119.765 259.328-119.765 29.483 0 57.984 4.181 85.333 11.179v31.488z"></path>
+              <path
+                d="M512 85.333c-212.096 0-384 171.904-384 384s171.904 384 384 384 384-171.904 384-384-171.904-384-384-384zM597.333 170.667c0 42.667-21.333 85.333-64 85.333s-64 42.667-64 85.333 0 128 0 128 42.667 0 42.667-128c0-23.595 19.072-42.667 42.667-42.667s42.667 19.072 42.667 42.667v128c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667c23.595 0 42.667-19.115 42.667-42.667h42.667v-85.333l42.667 42.667-42.667 42.667c0 128 0 128-85.333 170.667 0-42.667-42.667-42.667-128-42.667v-85.333l-85.333-85.333v-85.333c-42.667 0-42.667 42.667-42.667 42.667l-23.936-23.936-101.973-101.973c4.693-8.192 9.6-16.299 14.933-24.064l22.315-28.928c62.635-73.216 155.477-119.765 259.328-119.765 29.483 0 57.984 4.181 85.333 11.179v31.488z"
+              ></path>
             </svg>
 
             <select class="home-programming-language1" name="translate_language">
               <option value="English" selected="">English</option>
               <option value="Chinese">Chinese</option>
               <option value="Japanese">French</option>
-              <option value="French">Java</option>
+              <option value="French">Russian</option>
             </select>
-
           </div>
 
           <div class="home-convert-code-text-area">
-            <textarea
-              placeholder="placeholder"
-              class="home-textarea textarea form-control"
-            >{{ output }}</textarea>
+            <textarea placeholder=" "
+              class="home-textarea textarea"
+              is="highlighted-code"
+              cols="80"
+              rows="12"
+              tab-size="2"
+              auto-height>{{ output }}
+            </textarea>
           </div>
 
           <div class="home-my-code">
+
             <select class="home-current-code" name="current_code">
               <option selected>Python</option>
               <option value="Javascript">Javascript</option>
@@ -122,6 +134,7 @@
               <option value="Ruby">Ruby</option>
               <option value="Perl">Perl</option>
             </select>
+
             <select class="home-type" name="methods">
               <option value="Convert" selected="">Convert</option>
               <option value="Debug">Debug</option>
@@ -130,23 +143,34 @@
               <option value="Ask">Ask</option>
             </select>
           </div>
+
           <div class="home-code-text-area">
             <textarea
-              placeholder="placeholder"
-              class="home-textarea1 textarea"
+              placeholder="Input your code ..."
+              class="home-textarea textarea"
               name="userinput_code"
-            ></textarea>
+              is="highlighted-code"
+              cols="80"
+              rows="12"
+              tab-size="2"
+              auto-height></textarea>
           </div>
+
         </div>
         <div class="home-convert">
-          <button type="submit" class="home-navlink1 button">Generate</button>
+          <button
+            class="home-link1 button"
+            type="submit">Generate
+          </button>
         </div>
-        </form>
-
+      </form>
         {% include 'footer.html' %}
         {%block footer %}
         {% endblock %}
       </div>
     </div>
+    <script type="module" defer>
+      (async ({ chrome, netscape }) => { if (!chrome && !netscape) await import('https://unpkg.com/@ungap/custom-elements'); const { default: HighlightedCode } = await import('https://unpkg.com/highlighted-code'); HighlightedCode.useTheme('github-dark'); })(self);
+    </script>
   </body>
 </html>
