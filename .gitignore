@@ -1,2 +1,6 @@
 env
+.env
 __pycache__
+grit
+simple.html
+translate.html
