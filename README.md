@@ -15,7 +15,7 @@ pip install -r requirements.txt
 //run into your local machine
 flask --app app run
 ```
-If you run into problems while running it locally, especially when installing openai, openai requires you to upgrade by running `pip install --upgrade openai`, then initialize grit with `grit init`, install the latest update with `grint install --update`, then migrate with `openai migrate`.
+If you run into problems while running it locally, especially when installing openai, openai requires you to upgrade by running `pip install --upgrade openai`, then initialize grit with `grit init`, install the latest update with `grit install --update`, then migrate with `openai migrate`.
 
 #### Automatic migration with grit on Windows
 
