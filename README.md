@@ -1,6 +1,6 @@
 # CodeConverto
 
-![codeconverto](https://github.com/kents00/CodeConverto/assets/69900896/e6deb797-7165-4720-bab6-a3f4cf7d9d50)
+![codeconverto](https://github.com/kents00/CodeConverto/assets/69900896/2f936788-f5b5-47dd-9eb1-a3a2347e4f36)
 
 converts your favorite programming language into different language
 
